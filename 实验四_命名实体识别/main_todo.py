@@ -10,7 +10,11 @@ from data_loader import NerDataset
 from tqdm import tqdm
 from seqeval.metrics import classification_report
 from torch.utils.data import DataLoader
-from transformers import AdamW, get_linear_schedule_with_warmup, BertTokenizer
+try:
+    from transformers import AdamW
+except ImportError:
+    from torch.optim import AdamW
+from transformers import get_linear_schedule_with_warmup, BertTokenizer
 
 
 class Trainer:
