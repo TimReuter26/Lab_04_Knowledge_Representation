@@ -1,0 +1,16 @@
+.DS_Store
+*:Zone.Identifier
+__pycache__/
+*.py[cod]
+
+# Large model/checkpoint artifacts are downloaded or generated during Colab/WSL runs.
+*.bin
+*.h5
+*.msgpack
+实验四_命名实体识别/model_hub/
+实验四_命名实体识别/checkpoint/
+
+# Local notebook/runtime outputs.
+.ipynb_checkpoints/
+runs/
+outputs/
